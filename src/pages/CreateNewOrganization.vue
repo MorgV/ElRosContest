@@ -50,18 +50,8 @@ export default {
             <textarea class="form-control" v-model="params.description" placeholder="" aria-label="With textarea"
                 required></textarea>
         </div>
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Выберите файл с картинкой</label>
-            <input class="form-control" type="file" accept="image/png, image/jpeg" id="formFile">
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-                Активен
-            </label>
-        </div>
         <div class="buttons">
-            <button type="button" class="btn btn-secondary" @click="exit">Отмена</button>
+            <button type="button" class="btn btn-secondary" @click="exit">Назад</button>
             <button type="button" class="btn btn-success" @click="addOrganization">Добавить</button>
         </div>
     </form>
