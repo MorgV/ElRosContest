@@ -39,16 +39,32 @@ export default {
             <label for="formGroupExampleInput" class="form-label">Полное название</label>
             <input type="text" v-model="params.name" class="form-control" id="validationCustom01"
                 placeholder="Полное название организации" required>
+            <label v-if="this.params.name == false && isSubmit" for="formGroupExampleInput"
+                class="form-label error ">Необхадимо
+                заполнить поле
+                "Полное
+                название"</label>
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Короткое название</label>
             <input type="text" v-model="params.shortName" class="form-control" id="formGroupExampleInput2"
                 placeholder="Короткое название организации" required>
+            <label v-if="this.params.shortName == false && isSubmit" for="formGroupExampleInput"
+                class="form-label error">Необхадимо
+                заполнить поле
+                "Короткое
+                название"</label>
         </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text">Описание</span>
-            <textarea class="form-control" v-model="params.description" placeholder="" aria-label="With textarea"
-                required></textarea>
+        <div class="mb-3">
+            <div class="input-group ">
+                <span class="input-group-text">Описание</span>
+                <textarea class="form-control" v-model="params.description" placeholder="" aria-label="With textarea"
+                    required></textarea>
+            </div>
+            <label v-if="this.params.description == false && isSubmit" for="formGroupExampleInput"
+                class="form-label error">Необхадимо
+                заполнить поле
+                "Описание"</label>
         </div>
         <div class="buttons">
             <button type="button" class="btn btn-secondary" @click="exit">Назад</button>
@@ -58,6 +74,11 @@ export default {
 </template>
 
 <style scoped>
+.error {
+    color: rgb(195, 48, 48);
+
+}
+
 .wrapper {
     margin: 10% 20%;
     padding: 40px;

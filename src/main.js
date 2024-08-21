@@ -3,12 +3,17 @@ import App from './App.vue'
 import router from './router'
 import { createPinia, PiniaVuePlugin } from 'pinia'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 Vue.config.productionTip = false
 
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 Vue.use(PiniaVuePlugin)
+
 const pinia = createPinia()
 
 
